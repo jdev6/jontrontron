@@ -1,3 +1,24 @@
+08:00-08:45
+7A Kunstiõpetus
+307
+08:55-09:40
+7A A-võõrkeel
+204
+09:50-10:35
+7A Kirjandus
+203
+10:55-11:40
+7A Bioloogia
+304
+12:00-12:45
+7A Matemaatika
+201
+12:55-13:40
+7A B-võõrkeel (saksa keel)
+306
+13:50-14:35
+7A Klassijuhataja
+203]
 {
 	"^swoo+d$" : ["grommet"],
 	"^grommet$" : ["swood"],

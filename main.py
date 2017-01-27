@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import string, sys, discord, json, traceback, asyncio, re
 from random import choice
 
@@ -58,7 +57,7 @@ client = discord.Client(max_messages=5000)
 @asyncio.coroutine
 def random_game():
     while True:
-        yield from client.change_status(game=choice(games_list), idle=False)
+        yield from client.change_presence(game=choice(games_list), afk=False)
         yield from asyncio.sleep(600)
 
 @client.async_event
@@ -90,9 +89,6 @@ def on_message(message):
 
             with open('configs/games.json') as z:
                 game_names = json.load(z)
-
-            with open('configs/config.json') as z:
-                config = json.load(z)
 
             if config['reload_response']: # If reload_response is blank, this won't trigger.
                 yield from client.send_message(message.channel, config['reload_response'])
